@@ -82,7 +82,7 @@ var randomItems = [1, "Hello", 5, "GoodBye", 7, 14, "Aloha", 18, 19 ,"Adios", 26
 function getOnlyNumbers(randomItems){
   for(var i = 0; i<randomItems.length; i += 1){
     if(typeof(randomItems[n]) === "number"){
-      console.log("Should return only numbers", randomItems[i]);
+      //console.log("Should return only numbers", randomItems[i]);
     }
   }
 }
