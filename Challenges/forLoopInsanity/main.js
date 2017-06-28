@@ -51,12 +51,25 @@ for(var i = 0; i<numbers.length; i += 1 ){
 // loop through the numbers array, and print numbers greater than 10, but less than 50
 // bonus: Only print the odd numbers that meet these conditions
 for(var i = 0; i<numbers.length; i += 1 ){
-  if(numbers[i]>10 && numbers[i]<50){
-//console.log(numbers[i], "is greater than 10 and less than 50");
+  if((numbers[i]>10) && (numbers[i]<50) && (numbers[i]%2 === 1)){
+// console.log(numbers[i], "is greater than 10 and less than 50");
   }
 };
 
-
+function fizzBuzz(){
+  for( var i=1; i<=100; i+=1){
+    if(i%5 === 0 && i%3 === 0){
+    //  console.log("Fizz Buzz!", i);
+    }
+    else if(i%5 === 0){
+      //console.log("Fizz!", i);
+    }
+    else if(i%3 === 0){
+      //console.log("Buzz", i);
+    }
+  }
+}
+fizzBuzz();
 
 //challenge 4 not completely finished-- ask more questions?
 
@@ -64,14 +77,16 @@ for(var i = 0; i<numbers.length; i += 1 ){
 // loop through the array of random items, and print ONLY Numbers
 // bonus: Tell the function to return numbers, or strings, as a parameter
 var randomItems = [1, "Hello", 5, "GoodBye", 7, 14, "Aloha", 18, 19 ,"Adios", 26, 36, "Ciao"];
-
+// for some reason its still giving me an error on the length being undefined
 // would parseFloat() work?
-function getOnlyNumbers(){
+function getOnlyNumbers(randomItems){
   for(var i = 0; i<randomItems.length; i += 1){
-    console.log("Should return only numbers", randomItems[i]);
+    if(typeof(randomItems[n]) === "number"){
+      console.log("Should return only numbers", randomItems[i]);
+    }
   }
 }
-
+getOnlyNumbers();
 
 
 //challenge 5 completed with bonus
