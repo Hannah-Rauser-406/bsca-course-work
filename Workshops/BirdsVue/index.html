@@ -19,7 +19,42 @@
   </head>
   <body>
     <div id="app">
-      
+      <h2>{{ title }}</h2>
+        <div>
+          <div v-for="b in birds">
+
+            <h3>{{ b.name }}</h3>
+            <p>{{ b.species }}</p>
+            <p>{{ b.gender }}</p>
+            <img :src="b.img" />
+          </div>
+        </div>
+        <div >
+          <form id="My Form" v-on:submit.prevent='addBird'>
+            <div class="col-md-12">
+                <label>Bird Name</label>
+                <input type="text" v-model='name'/>
+            </div>
+            <div class="col-md-12">
+              <label>Bird Species</label>
+              <input type="text" v-model='species'/>
+            </div>
+            <div class="col-md-12">
+              <label>Bird Gender</label>
+              <input type="text" v-model='gender'/>
+            </div>
+            <div class="col-md-12">
+              <label>Bird Image</label>
+              <input type="text" v-model='img'/>
+            </div>
+            <button type="submit" class="btn btn-primary">Gram It!</button>
+          </form>
+        </div>
+
+
+
+
+
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

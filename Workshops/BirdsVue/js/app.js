@@ -11,10 +11,10 @@ function Bird(name, species, gender, img, predator){
   this.img = img;
   this.predator = predator ? true : false;
 }
-var b3 = new Bird('brown headed cowbird','cowbird','male', 'http://d2fbmjy3x0sdua.cloudfront.net/cdn/farfuture/g_-iMVxLCj-jig9bJJgJ-6SOnqM5P49jToTcO-PxgSw/mtime:1422549877/sites/default/files/Bronzed_Cowbird_k07-7-046_l_1.jpg')
+var b3 = new Bird('Purple Finch','Haemorhous purpureus','male', 'http://mtnhp.org/thumbnail/defaultGen.aspx?itemid=90723&names=Purple%20Finch%20Haemorhous%20purpureus&copyright=Dr.%20Dan%20Sudia,%20Florida%20Museum%20of%20Natural%20History.%20www.flmnh.ufl.edu/natsci/ornithology/sephotos&photographer=Dan%20Sudia&maxWidth=434&maxHeight=400')
  console.log(b3);
 
-var b4 = new Bird('Blue Jay', 'corvidae', 'female', '',)
+var b4 = new Bird('Blue Jay', 'corvidae', 'female', '')
 console.log(b4);
 var b5 = new Bird('Belted Kingfisher', 'Alcedinidae', 'Male', 'http://mtnhp.org/thumbnail/defaultGen.aspx?itemid=243792&names=Belted%20Kingfisher%20Megaceryle%20alcyon&copyright=Nathan%20DeBoer&photographer=Nathan%20DeBoer&maxWidth=434&maxHeight=400' )
 var b6 = new Bird('Sharp Tailed Grouse', 'Tympanuchus phasianellus', 'Female', 'http://mtnhp.org/thumbnail/defaultGen.aspx?itemid=90484&names=Sharp-tailed%20Grouse%20Tympanuchus%20phasianellus&copyright=2003%20by%20Chuck%20Carlson&photographer=Chuck%20Carlson&maxWidth=434&maxHeight=400')
@@ -36,12 +36,23 @@ var app = new Vue({
   el: '#app',//where the app hooks into Vue
   data: {
     title: title,
-    birds : birds,
+    birds: birds,
     name: undefined,
     species: undefined,
     gender: undefined,
     img: undefined,
-  }
+  },
+  'methods': {
+    addBird: function(){
+      var newBird = new Bird(this.name, this.species, this.gender, this.img);
+      this.birds.push(newBird);
+      console.log(this.birds)
+      this.name ='';
+      this.species ='';
+      this.gender ='';
+      this.img ='';
+    }
 
+  }
 
 })
