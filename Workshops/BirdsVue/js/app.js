@@ -55,4 +55,4 @@ var app = new Vue({
 
   }
 
-})
+});

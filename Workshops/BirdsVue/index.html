@@ -4,9 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+      @import url('https://fonts.googleapis.com/css?family=Homemade+Apple');
+      </style>
     <title></title>
 
     <!-- Bootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -20,9 +24,8 @@
   <body>
     <div id="app">
       <h2>{{ title }}</h2>
-        <div>
+        <div class="bird-divs">
           <div v-for="b in birds">
-
             <h3>{{ b.name }}</h3>
             <p>{{ b.species }}</p>
             <p>{{ b.gender }}</p>
