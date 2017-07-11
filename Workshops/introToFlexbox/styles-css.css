@@ -1,9 +1,17 @@
 .flex-container{
   border: solid 10px #8e44ad;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  flex-wrap: wrap;
+
 }
 .flex-item{
   font-size: 50px;
   text-align: center;
+  margin: 10px;
+  width: calc(33.33333% - 20px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .item1 {
   background-color: #1abc9c;

@@ -33,7 +33,7 @@ In order to implement flex properties you need a `flex container` (parent) which
 
 #### justify-content: What to do with the main axis extra space?
 flex-end, flex-start, center, space-between, space-around
-
+what to do with the extra white space on the left and the right of the divs
 
 
 #### align-items: What to do with the cross axis extra space?
